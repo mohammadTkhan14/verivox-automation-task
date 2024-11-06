@@ -8,12 +8,16 @@ Prerequisites
 
 Project Setup and Installation: From the terminal
 
-Step 1: Clone the repo
+Step 1: Clone the repo from the terminal
 git clone https://github.com/mohammadTkhan14/verivox-automation-task.git
 
-Step 2: Navigate to project folder
+Step 2: Navigate to project folder - using the below command
 
-cd verivox-automation-task
+cd verivox-automation-task  - 
+
+just verify if the project is cloned properly run the ls command and we should see
+
+cypress README.md cypress.config.js [files]
 
 Step 3: Install the dependencies
 
@@ -24,7 +28,7 @@ Step 4: Running the Tests
 Headless Test Execution
 
 npm run test
-[reports can be found cypress/results/ and cypress/reports/html/]
+[reports can be found cypress/reports/yml and cypress/reports/html/]
 
 Interactive mode
 
@@ -40,7 +44,7 @@ cypress/e2e/tests/: Test files for specific features and scenarios.
 
 cypress/e2e/pages/: Page Object files containing functions for interacting with elements.
 
-cypress/results/: Directory for generated JUnit XML reports.
+cypress/reports/xml: Directory for generated JUnit XML reports.
 
 cypress/reports/html/: Directory for generated HTML reports.
 
