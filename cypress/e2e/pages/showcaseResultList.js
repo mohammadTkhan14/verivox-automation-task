@@ -1,46 +1,6 @@
 // All elements of the main page.
 
-class BankingPage {
-    visit() {
-        cy.visit('https://www.verivox.de');
-    }
-
-    acceptCookies() {
-        // Selecting the accept cookies button by its ID
-        cy.get('#uc-btn-accept-banner', { timeout: 10000 })
-          .should('be.visible') // Ensure the button is visible
-          .wait(1000) // Wait a little to ensure button is clickable
-          .click(); // Click the button
-    }
-
-    selectKreditProduct() {
-        // Click on the 'Kredit' product link
-        cy.contains('Kredit').click();
-    }
-
-    enterLoanAmount(amount) {
-        // Locate the input field for loan amount and enter the provided amount
-        cy.get('input[name="kreditbetrag"]')
-          .first() // Select the first element if there are multiple
-          .should('be.visible') // Ensure the input field is visible
-          .clear() // Clear any existing value
-          .type(amount.toString()); // Enter the loan amount
-    }
-
-    selectLoanDuration(duration) {
-        // Locate the loan duration select dropdown and choose the provided duration
-        cy.get('select[name="kreditlaufzeit"]')
-          .first() // Select the first dropdown element
-          .should('be.visible') // Ensure the dropdown is visible
-          .select(duration.toString()); // Select the loan duration
-    }
-
-    clickCompareButton() {
-        // Click on the 'Jetzt vergleichen' button to initiate the comparison
-        cy.contains('Jetzt vergleichen')
-          .should('be.visible') // Ensure the button is visible
-          .click(); // Click the button
-    }
+class showcaseResultList {
 
     verifyResultItems() {
         // Scroll to load dynamic content and verify at least 10 product cards
@@ -85,4 +45,4 @@ class BankingPage {
     }
 }
 
-export default BankingPage;
+export default showcaseResultList;
