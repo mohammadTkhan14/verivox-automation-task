@@ -1,0 +1,12 @@
+{
+  "testCases": [
+    {
+      "postcode": "10409",
+      "expectedCities": ["Berlin"]
+    },
+    {
+      "postcode": "77716",
+      "expectedCities": ["Fischerbach", "Haslach", "Hofstetten"]
+    }
+  ]
+}
