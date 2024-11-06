@@ -13,7 +13,7 @@ git clone https://github.com/mohammadTkhan14/verivox-automation-task.git
 
 Step 2: Navigate to project folder
 
-cd verivox-automation-challenge
+cd verivox-automation-task
 
 Step 3: Install the dependencies
 

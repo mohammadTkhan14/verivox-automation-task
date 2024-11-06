@@ -1,3 +1,4 @@
+// Scenario 3 for API test verification
 describe('Backend API for Address Checks', () => {
     const testCases = [
         { postcode: '10409', expectedCities: ['Berlin'] },
@@ -8,10 +9,6 @@ describe('Backend API for Address Checks', () => {
         it(`should return the correct cities for postcode ${postcode}`, () => {
             cy.request(`https://service.verivox.de/geo/latest/cities/${postcode}`)
                 .then((response) => {
-                    // Print the response for debugging
-                    cy.log('Response Body:', JSON.stringify(response.body));
-                    console.log('Response Body:', response.body);
-
                     // Verify response status
                     expect(response.status).to.eq(200);
 

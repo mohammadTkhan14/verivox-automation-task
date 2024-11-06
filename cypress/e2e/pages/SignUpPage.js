@@ -1,3 +1,5 @@
+// Seperating the elements of SignUp in different file.
+
 class SignUpPage {
 
     returnAmount() {
