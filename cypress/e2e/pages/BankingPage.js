@@ -79,6 +79,9 @@ class BankingPage {
         cy.get('button')
           .contains('Alle Banken vergleichen')
           .click({ force: true }); // Force click in case the element is not interactable
+
+        cy.contains('Persönliche Expertenberatung') // Just making sure the next page is loaded
+          .should('be.visible')
     }
 }
 

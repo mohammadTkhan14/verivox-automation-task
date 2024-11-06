@@ -56,10 +56,12 @@ describe('Banking Showcase Tests', () => {
         bankingPage.clickAngebot();
 
         // Verify the URL
-        cy.wait(3000); // Optionally replace with retry logic
-        cy.url().then((url) => {
-            expect(url).to.match(/^https:\/\/www\.verivox\.de\/ratenkredit\/vergleich\//);
-            expect(url).to.match(/\/signup10$/);
+        // Load URL patterns from the fixture
+        cy.fixture('signupUrls').then((urls) => {
+            // Retry logic for verifying the URL with data from the fixture
+            cy.url()
+              .should('match', new RegExp(urls.baseUrl)) // Match the base URL from the fixture
+              .should('match', new RegExp(urls.signupPattern)); // Match the signup pattern from the fixture
         });
 
         // Bonus task: Validate loan amount and duration in signup page
