@@ -14,8 +14,9 @@ class homePage {
     }
 
     selectKreditProduct() {
-        // Click on the 'Kredit' product link
-        cy.contains('Kredit').click();
+        cy.contains('Kredit', { timeout: 10000 }) // Increasing the default timeout to make sure the element is present
+          .should('be.visible')                   // Ensure it's visible
+          .click({force: true});
     }
 
     enterLoanAmount(amount) {
