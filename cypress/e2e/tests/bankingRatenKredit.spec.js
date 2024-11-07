@@ -55,7 +55,7 @@ describe('Banking Ratenkredit Calculator - Tariff Selection Tests', () => {
 
     it('Verify the Signup funnel', () => {
         // Step 3: (Click ALLE BANKEN VERGLEICHEN OR IN 7 MINUTEN ZUM ANGEBOT)
-        homePageInstance.clickAngebot();
+        showcaseResultListInstance.clickAngebot();
 
         // Verify the URL
         // Load URL patterns from the fixture
