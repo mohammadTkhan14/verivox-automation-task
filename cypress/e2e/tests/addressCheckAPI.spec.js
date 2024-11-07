@@ -1,8 +1,8 @@
 describe('Backend API for Address Checks', () => {
-    // Declare the testCases variable here
+
     let testCases;
 
-    // Load the fixture data before the tests
+    // Load the fixture data before each test
     beforeEach(() => {
         cy.fixture('addressData').then((data) => {
             testCases = data.testCases; // Assign the fixture data to the testCases variable
@@ -21,9 +21,9 @@ describe('Backend API for Address Checks', () => {
                     expect(response.status).to.eq(200);
 
                     // Extract city names from the response and assert they match expected cities
-                    const cityNames = response.body.map(city => city.Name);
+                    const cityNames = response.body.map((city) => city.Name);
 
-                    // Check that cityNames array is an array and matches expectedCities
+                    // Checking that cityNames array matches expectedCities
                     expect(cityNames).to.be.an('array');
                     expect(cityNames).to.deep.equal(expectedCities);
                 });
